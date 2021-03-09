@@ -9,5 +9,5 @@
       image: ami-04b00c8fa34a2007e
       key_name: mac-new
       region: us-east-1
-      tags:
-        Environment: web
+      wait: yes
+      
