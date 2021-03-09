@@ -11,14 +11,14 @@
        "tag:Day": Monday
      register: ec2_info
    - name: displaying output
-     debug: 
-       msg: "{{ec2_info}}"
+     debug: msg="{{item.instance_id}}"
+     with_items: "{{ec2_info.instances}}"
     #  tags:
     #    - always
   #  - name: displaying output
   #    debug: msg="{{item.instance_id}}"
   #    with_items: "{{ec2_info.instances}}"
-  
+
   #  - name: starting ec2 instance
   #    ec2:
   #     instance_ids: "{{item.instance_id}}"
